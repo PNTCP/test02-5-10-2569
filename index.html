@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>684259008</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            margin: 0 26rem;
+        }
+
+        header h2 {
+            color: rgb(0, 0, 105);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .nav-list ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: rgb(214, 214, 214);
+            justify-content: center;
+            padding: 3rem 0;
+        }
+
+        .layout-text {
+            margin-left: 26rem;
+            margin-right: 30px;
+        }
+
+        .layout-text h1 {
+            font-size: 40px;
+        }
+
+        .layout-text p {
+            color: gray;
+            margin: 15px 0;
+        }
+
+        .course {
+            padding: 15px;
+            border: 1px solid;
+            border-radius: 10px;
+            color: white;
+            background-color: rgb(0, 0, 192);
+            font-size: bold;
+            margin: 8px 0;
+        }
+
+        .course:hover {
+            background-color: rgb(0, 0, 116);
+            cursor: pointer;
+        }
+
+        .layout-card {
+            background-color: white;
+            display: inline-block;
+            border-radius: 16px;
+            margin-left: 30px;
+        }
+
+        .layout-body {
+            padding: 30px 20px;
+            margin-left: 10px;
+        }
+
+        .form-input {
+            display: flex;
+        }
+
+        .submit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-right: 15px;
+        }
+
+        .input {
+            padding: 13px 24px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .form-select {
+            margin: 10px 0;
+        }
+
+        .button-submit {
+            padding-inline: 12.8rem;
+            padding-block: 15px;
+            color: white;
+            background-color: rgb(0, 0, 192);
+            border: 1px solid;
+            border-radius: 8px;
+            font-size: bold;
+        }
+
+        .button-submit:hover {
+            background-color: rgb(0, 0, 116);
+            cursor: pointer;
+        }
+
+        .course-layout {
+            margin-top: 30px;
+        }
+
+        .course-body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 15px 0;
+        }
+
+        .card {
+            border: 1px solid rgb(173, 173, 173);
+            margin-right: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.2s;
+
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .img-card {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .html {
+            background-color: rgb(255, 210, 126);
+            color: rgb(172, 99, 4);
+        }
+
+        .css {
+            background-color: rgb(180, 244, 255);
+            color: rgb(7, 109, 128);
+        }
+
+        .ui-ux {
+            background-color: rgb(209, 158, 252);
+            color: rgb(65, 18, 104);
+        }
+
+        .card-body {
+            padding: 20px 0 50px
+        }
+
+        .card-body p {
+            padding-left: 15px;
+            color: rgb(102, 102, 102);
+        }
+
+        footer {
+            background-color: rgb(36, 36, 36);
+            color: white;
+            padding-block: 2rem;
+            margin-top: 5.8rem;
+
+        }
+
+        .footer-body {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 26rem;
+        }
+
+        @media (max-width: 900px) {
+            .header {
+                margin: 0 3rem;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .layout-text {
+                margin: 1rem 3rem;
+            }
+
+            .course-body {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card {
+                margin-bottom: 1.25rem;
+            }
+
+            .footer-body {
+                margin: 0 3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-nav {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .nav-list ul {
+                display: grid;
+            }
+
+            .course {
+                padding-inline: 12rem;
+            }
+
+            .form-input {
+                flex-direction: column;
+            }
+
+            .course-body {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-body {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <h2>SE008: Learning Hub</h2>
+        <nav class="main-nav">
+            <div class="nav-list">
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>หลักสูตร</li>
+                    <li>ติดต่อเรา</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main-body">
+        <div class="main-layout">
+            <div class="layout-text">
+                <h1>เริ่มต้นสร้างเว็บไซต์<br>ในแบบของคุณ</h1>
+                <p>เรียนรู้การออกแบบและพัฒนาเว็บไซต์ผ่านการลงมือทำ พร้อมพัฒนาทักษะที่ใช้ต่อยอดในโครงงานของคุณ</p>
+                <button class="course">ดูหลักสูตรทั้งหมด</button>
+            </div>
+            <form action="">
+                <div class="layout-card">
+                    <div class="layout-body">
+                        <div class="form-input">
+                            <div class="submit-form">
+                                <label for="name">ชื่อ-นามสกุล</label>
+                                <input type="text" class="input" placeholder="ชื่อของคุณ" required>
+                            </div>
+                            <div class="submit-form">
+                                <label for="email">อีเมล</label>
+                                <input type="email" class="input" placeholder="your@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-select">
+                            <input type="radio" id="html" name="fav-lang" class="radio-check">
+                            <label for="text">HTML</label>
+                            <input type="radio" id="web" name="fav-lang" class="radio-check">
+                            <label for="text">Web</label>
+                            <input type="radio" id="html" name="fav-lang" class="radio-check">
+                            <label for="text">HTML</label>
+                        </div>
+                        <button type="submit" class="button-submit">ส่งข้อมูล</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <div class="course-layout">
+                <h2>หลักสูตรแนะนำ</h2>
+                <div class="course-body">
+                    <div class="card">
+                        <div class="img-card html">
+                            <h1>&lt;HTML></h1>
+                        </div>
+                        <div class="card-body">
+                            <p>HTML for Beginner</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-card css">
+                            <h1>{ CSS }</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>Responsive Web Design</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-card ui-ux">
+                            <h1>UI / UX</h1>
+                        </div>
+                        <div class="card-body">
+                            <p>UI Design Essentails</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-body">
+            <p>&copy; 2026 SE008: Learing Hub</p>
+            <p>ณัฐพนธ์ จันทร์พรม</p>
+        </div>
+    </footer>
+</body>
+
+</html>
